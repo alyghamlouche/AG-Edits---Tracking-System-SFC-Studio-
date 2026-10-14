@@ -1,6 +1,6 @@
 
-import { createServerClient } from '@supabase/ssr';
-import { cookies } from 'next/headers';
+import { createServerClient } from "@supabase/ssr";
+import { cookies } from "next/headers";
 
 export async function supabaseServer() {
   const cookieStore = await cookies();
@@ -22,7 +22,7 @@ export async function supabaseServer() {
               }
             );
           } catch {
-            // Cookie writes may be unavailable
+            // Cookie writes may not be available
             // in Server Components.
           }
         },
