@@ -36,3 +36,6 @@ export async function supabaseServer() {
     }
   );
 }
+
+// Backwards-compatible server client used by workspace and server actions.
+export const db = supabaseServer;
